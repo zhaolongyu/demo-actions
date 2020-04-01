@@ -1,6 +1,8 @@
-name: Greet Everyone
-on: [push]
-
+name: GitHub Actions Build and Deploy Demo
+on:
+  push:
+    branches:
+      - master
 jobs:
   build:
     name: Greeting
