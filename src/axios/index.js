@@ -20,7 +20,6 @@ axios.interceptors.response.use(
     config.headers = {
       token: localStorage.getItem('token')
     }
-    console.log(config)
     return config
   },
   err => {

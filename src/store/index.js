@@ -9,19 +9,15 @@ const modulesA = {
   },
   mutations: {
     savelist () {
-      console.log(222222222222222)
     },
     savelist123123 () {
-      console.log(222222222222222)
     },
     dsfsd123 () {
-      console.log(222222222222222)
     }
   },
   actions: {
     saveSessionId ({ commit }, payload) {
       commit('savelist')
-      console.log({ commit }, payload)
     }
   }
 }
@@ -34,7 +30,6 @@ export default new Vuex.Store({
   },
   mutations: {
     tokenBooleanFalse () {
-      console.log(11111111111)
       this.state.token = false
     },
     tokenBooleanTrue () {

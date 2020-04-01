@@ -34,7 +34,6 @@ export default {
   },
   methods: {
     $_myGreatMixin_update: function () {
-      console.log(1)
     },
     clickhandl () {
       this.$router.push({
@@ -43,7 +42,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.test)
   }
 }
 </script>

@@ -14,7 +14,6 @@ export default {
   methods: {
     cilckhand (r) {
       this.axios.get('/api/about').then(res => {
-        console.log(res)
       })
       switch (r) {
         case 'home':
