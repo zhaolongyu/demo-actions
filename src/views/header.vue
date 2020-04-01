@@ -8,13 +8,13 @@
 <script>
 export default {
   methods: {
-    cilckhand () {
+    cilckhand() {
       this.$router.push({
-        path: '/about'
-      })
+        path: "/about"
+      });
     }
   }
-}
+};
 </script>
 
 <style></style>

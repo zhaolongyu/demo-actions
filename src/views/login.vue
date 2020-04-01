@@ -11,52 +11,52 @@
 
 <script>
 // import { mapState, mapMutations } from "vuex";
-import { createNamespacedHelpers } from 'vuex'
-const { mapMutations, mapState } = createNamespacedHelpers('modulesA')
+import { createNamespacedHelpers } from "vuex";
+const { mapMutations, mapState } = createNamespacedHelpers("modulesA");
 export default {
-  data () {
+  data() {
     return {
       data: {
-        name: '',
-        password: ''
+        name: "",
+        password: ""
       }
-    }
+    };
   },
   computed: {
     ...mapState({
       a: state => {
-        return state.stoken
+        return state.stoken;
       },
       b: state => state.list
     })
   },
-  mounted () {
-    this.savelist()
+  mounted() {
+    this.savelist();
   },
   methods: {
-    ...mapMutations(['savelist']),
-    clickhand () {
-      this.axios.post('/api/login', this.data).then(res => {
-        localStorage.setItem('token', res.data.data)
-        if (res.data.code === '200') {
-          alert(res.data.msg)
+    ...mapMutations(["savelist"]),
+    clickhand() {
+      this.axios.post("/api/login", this.data).then(res => {
+        localStorage.setItem("token", res.data.data);
+        if (res.data.code === "200") {
+          alert(res.data.msg);
           setTimeout(() => {
             this.$router.push({
-              path: '/about'
-            })
-          }, 500)
+              path: "/about"
+            });
+          }, 500);
         } else {
-          alert(res.data.msg)
+          alert(res.data.msg);
         }
-      })
+      });
     },
-    registered () {
-      this.axios.post('/api/registered', this.data).then(() => {
+    registered() {
+      this.axios.post("/api/registered", this.data).then(() => {
         // alert(res.data.msg);
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <style></style>
