@@ -36,9 +36,7 @@ export default {
     $_myGreatMixin_update: function () {
     },
     clickhandl () {
-      this.$router.push({
-        path: '/about'
-      })
+      alert('1')
     }
   },
   mounted () {
